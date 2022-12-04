@@ -5733,7 +5733,7 @@ nav.menu .cr-dropdown ul {
     font-weight: 400;
 }
 
-.login-form .single-login a {
+.login-form .single-login a, .login-form .single-login button {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: 1px solid #eceff8;
     display: inline-block;
@@ -5747,7 +5747,7 @@ nav.menu .cr-dropdown ul {
     font-weight: 400;
 }
 
-.login-form .single-login a:hover {
+.login-form .single-login a:hover, .login-form .single-login button:hover {
     background: #F07C29;
     color: #fff;
     border: 1px solid #F07C29;
@@ -5787,9 +5787,9 @@ nav.menu .cr-dropdown ul {
     overflow: hidden;
 }
 
-.single-register form {}
+.single-register {}
 
-.single-register form label,
+.single-register label,
 .single-register label {
     color: #333;
     display: block;
@@ -5800,7 +5800,7 @@ nav.menu .cr-dropdown ul {
     font-weight: 400;
 }
 
-.single-register form input {
+.single-register input:not([type='checkbox']) {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: 1px solid #eceff8;
     box-shadow: none;
@@ -5831,7 +5831,7 @@ nav.menu .cr-dropdown ul {
     margin-top: 15px;
 }
 
-.single-register-3 #rememberme {
+.single-register-3 #terms_and_conditions {
     float: left;
 }
 
@@ -5852,7 +5852,7 @@ nav.menu .cr-dropdown ul {
     font-weight: 400;
 }
 
-.single-register>a {
+.single-register>a, .single-register>button {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: 1px solid #eceff8;
     box-shadow: none;
@@ -5867,7 +5867,7 @@ nav.menu .cr-dropdown ul {
     font-weight: 400;
 }
 
-.single-register>a:hover {
+.single-register>a:hover, .single-register>button:hover {
     background-color: #F07C29;
     color: #fff;
     border: 1px solid #F07C29;
@@ -7621,6 +7621,10 @@ p.lost-password a:hover {
 
 .compare-table .table tbody tr td.pro-ratting i {
     color: #c29958;
+}
+
+input.is-invalid {
+  border: 1.5px solid #dc3545 !important;
 }
 
 /*------ end Compare Page Wrapper -----*/

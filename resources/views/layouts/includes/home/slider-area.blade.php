@@ -10,7 +10,7 @@
                                 <div class="col-lg-5">
                                     <div class="slider-content slider-animated-1 text-center">
                                         <h1>Huge Sale</h1>
-                                        <h2>koparion</h2>
+                                        <h2>Book Store</h2>
                                         <h3>Now starting at £99.00</h3>
                                         <a href="#">Shop now</a>
                                     </div>
@@ -38,7 +38,7 @@
                                 <div class="col-lg-5">
                                     <div class="slider-content slider-animated-1 text-center">
                                         <h1>Huge Sale</h1>
-                                        <h2>koparion</h2>
+                                        <h2>Book Store</h2>
                                         <h3>Now starting at £99.00</h3>
                                         <a href="#">Shop now</a>
                                     </div>
@@ -66,7 +66,7 @@
                                 <div class="col-lg-5">
                                     <div class="slider-content slider-animated-1 text-center">
                                         <h1>Huge Sale</h1>
-                                        <h2>koparion</h2>
+                                        <h2>Book Store</h2>
                                         <h3>Now starting at £99.00</h3>
                                         <a href="#">Shop now</a>
                                     </div>

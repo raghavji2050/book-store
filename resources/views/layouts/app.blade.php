@@ -8,24 +8,10 @@
     <body>
         @include('layouts.includes.header')
 
-        @include('layouts.includes.banner-area')
-        @include('layouts.includes.slider-area')
-        @include('layouts.includes.product-area')
-        @include('layouts.includes.middle-banner')
-        @include('layouts.includes.bestseller-area')
-        @include('layouts.includes.new-book-area')
-        @include('layouts.includes.banner-static-area')
-        @include('layouts.includes.most-product-area')
-        @include('layouts.includes.testimonial-area')
-        @include('layouts.includes.recent-post-area')
-        @include('layouts.includes.social-group-area')
+        @yield('content')
 
         @include('layouts.includes.footer')
-
-        @include('layouts.includes.product-modal')
-
         @include('layouts.includes.scroll-up')
-
         @include('layouts.includes.scripts')
     </body>
 </html>

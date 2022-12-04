@@ -31,7 +31,7 @@
                     </div>
                     <div class="banner-text">
                         <h4>Cash on delivery</h4>
-                        <p>Lorem ipsum dolor consecte</p>
+                        <!-- <p>Lorem ipsum dolor consecte</p> -->
                     </div>
                 </div>
             </div>

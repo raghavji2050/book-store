@@ -14,7 +14,7 @@
                         <p>
                             Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum notare quam
                         </p>
-                        <a href="#">koparion</a>
+                        <a href="#">Book Store</a>
                     </div>
                 </div>
             </div>

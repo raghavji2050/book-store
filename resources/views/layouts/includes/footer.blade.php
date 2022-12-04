@@ -8,10 +8,10 @@
                     <div class="footer-top-menu bb-2">
                         <nav>
                             <ul>
-                                <li><a href="#">home</a></li>
+                                <li><a href="{{ route('home') }}">home</a></li>
                                 <li><a href="#">Enable Cookies</a></li>
                                 <li><a href="#">Privacy and Cookie Policy</a></li>
-                                <li><a href="#">contact us</a></li>
+                                <li><a href="{{ route('contact') }}">contact us</a></li>
                                 <li><a href="#">blog</a></li>
                             </ul>
                         </nav>
@@ -100,7 +100,7 @@
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="copy-right-area">
                         <p>
-                            © 2022 <strong> Koparion </strong> Mede with ❤️ by <a href="https://hasthemes.com/" target="_blank"><strong>HasThemes</strong></a>
+                            © {{ date('Y') }} <strong> Book Store </strong></a>
                         </p>
                     </div>
                 </div>
