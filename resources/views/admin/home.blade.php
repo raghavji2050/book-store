@@ -10,8 +10,6 @@
           </h1>
         </div>
         <div class="col-2 text-end">
-          <button class="btn btn-primary" type="button" name="button">Create User</button>
-          </a>
         </div>
       </div>
     </div>

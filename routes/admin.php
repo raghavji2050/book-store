@@ -14,3 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('index');
+
+Route::resource('collections', Admin\CollectionController::class)->except(['show']);
+
+Route::resource('categories', Admin\CategoryController::class)->except(['show']);
+
+Route::resource('authors', Admin\AuthorController::class)->except(['show']);
+
+Route::resource('books', Admin\BookController::class)->except(['show']);
