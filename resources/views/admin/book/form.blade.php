@@ -134,12 +134,13 @@
   										<input class="form-check-input" type="checkbox" id="in-stock-status" name="in_stock" value="1" @if(old('status', $book->in_stock)) checked @endif>
   										<label class="form-check-label" for="in-stock-status">In stock</label>
   									</div>
+
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
       </div>
     </div>
+    @include('admin.book.image')
 </div>
-
 @endsection

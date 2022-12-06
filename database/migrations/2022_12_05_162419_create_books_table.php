@@ -43,8 +43,6 @@ class CreateBooksTable extends Migration
                   ->constrained();
             $table->integer('order_by')->nullable();
             $table->integer('reviews_count')->nullable();
-            $table->json('images')->nullable();
-            $table->string('featured_image')->nullable();
             $table->integer('total_pages')->nullable();
             $table->string('isbn')->nullable();
             $table->boolean('status')->default(false);

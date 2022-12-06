@@ -22,3 +22,7 @@ Route::resource('categories', Admin\CategoryController::class)->except(['show'])
 Route::resource('authors', Admin\AuthorController::class)->except(['show']);
 
 Route::resource('books', Admin\BookController::class)->except(['show']);
+
+Route::post('uploadFile', [App\Http\Controllers\Admin\ImageController::class, 'uploadFile'])->name('uploadFile');
+
+Route::post('removeFile', [App\Http\Controllers\Admin\ImageController::class, 'removeFile'])->name('removeFile');

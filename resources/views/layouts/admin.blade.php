@@ -9,8 +9,11 @@
                 opacity: 0;
             }
         </style>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <script src="/admin/js/settings.js"></script>
         <link href="/admin/css/light.css" type="text/css" rel="stylesheet" />
+
+        @yield('styles')
     </head>
 
     <body>

@@ -85,7 +85,7 @@ class BookController extends Controller
      */
     public function edit($id)
     {
-       $book = Book::findOrFail($id);
+       $book = Book::with('images')->findOrFail($id);
 
        return view($this->baseViewDirctory.'.form', compact('book'));
     }
