@@ -31,7 +31,7 @@
 
       var myDropzone = new Dropzone(".dropzone",{
         maxFilesize: 2, // 2 mb
-        acceptedFiles: ".jpeg,.jpg,.png,.pdf",
+        acceptedFiles: ".jpeg,.jpg,.png,.webp",
         addRemoveLinks: true,
       });
 

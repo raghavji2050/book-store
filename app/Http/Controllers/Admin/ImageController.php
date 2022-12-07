@@ -13,7 +13,7 @@ class ImageController extends Controller
     public function uploadFile(Request $request)
     {
         $validator = Validator::make($request->all(), [
-           'file' => 'required|mimes:png,jpg,jpeg,pdf|max:2048',
+           'file' => 'required|mimes:png,jpg,jpeg,webp|max:2048',
            'book_id' => 'required|exists:books,id'
         ]);
 

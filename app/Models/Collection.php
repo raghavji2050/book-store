@@ -10,4 +10,9 @@ class Collection extends Model
     use HasFactory;
 
     public $guarded = [];
+
+    public function books()
+    {
+      return $this->hasMany(Book::class);
+    }
 }

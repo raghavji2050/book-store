@@ -61,9 +61,9 @@ class BookController extends Controller
           'reviews_count' => 'nullable',
         ]);
 
-        Book::create($modelAttributes);
+        $book = Book::create($modelAttributes);
 
-        return redirect()->route($this->baseRouteName.'.index');
+        return redirect()->route($this->baseRouteName.'.edit', $book->id);
     }
 
     /**

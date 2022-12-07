@@ -40,7 +40,7 @@
                         </div>
                         <div class="mb-3 col-md-6">
                             <label for="sub_title">Sub Title</label>
-                            <input type="text" class="form-control @error('sub_title') is-invalid @enderror" id="sub_title" placeholder="Sub Title" name="sub_title" value="{{ old('name', $book->sub_title) }}" />
+                            <input type="text" class="form-control @error('sub_title') is-invalid @enderror" id="sub_title" placeholder="Sub Title" name="sub_title" value="{{ old('sub_title', $book->sub_title) }}" />
                             @include('admin.validation-error', ['element' => 'sub_title'])
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                       <select class="form-control mb-3 @error('collection_id') is-invalid @enderror" id="collection_id" name="collection_id">
     										<option selected="" value="">Select Collection</option>
                         @foreach(\App\Models\Collection::get() as $collection)
-								          <option value="{{ $collection->id }}" @if(old('author_id', $book->collection_id) == $collection->id) selected @endif>{{ $collection->title }}</option>
+								          <option value="{{ $collection->id }}" @if(old('collection_id', $book->collection_id) == $collection->id) selected @endif>{{ $collection->title }}</option>
                         @endforeach
     									</select>
                       @include('admin.validation-error', ['element' => 'collection_id'])
@@ -119,7 +119,7 @@
                       <select class="form-control mb-3 @error('category_id') is-invalid @enderror" id="category_id" name="category_id">
     										<option selected="" value="">Select Category</option>
                         @foreach(\App\Models\Category::get() as $category)
-								          <option value="{{ $category->id }}" @if(old('author_id', $book->category_id) == $category->id) selected @endif>{{ $category->title }}</option>
+								          <option value="{{ $category->id }}" @if(old('category_id', $book->category_id) == $category->id) selected @endif>{{ $category->title }}</option>
                         @endforeach
     									</select>
                       @include('admin.validation-error', ['element' => 'category_id'])

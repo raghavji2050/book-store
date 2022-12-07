@@ -16,10 +16,9 @@ class CreateImagesTable extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->id();
             $table->foreignId('book_id')
-                  ->onUpdate('cascade')
-                  ->onDelete('cascade')
+                  ->references('id')
                   ->on('books')
-                  ->constrained();
+                  ->onDelete('cascade');
             $table->string('path');
             $table->boolean('is_featured')->default(false);
             $table->timestamps();
