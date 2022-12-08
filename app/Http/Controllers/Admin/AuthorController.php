@@ -47,6 +47,7 @@ class AuthorController extends Controller
           'slug'  => 'required|unique:authors,slug',
           'order_by' => 'nullable',
           'status' => 'nullable',
+          'description' => 'nullable',
         ]);
 
         Author::create($modelAttributes);
@@ -73,7 +74,7 @@ class AuthorController extends Controller
      */
     public function edit($id)
     {
-       $author = Author::findOrFail($id);
+       $author = Author::with('images')->findOrFail($id);
 
        return view($this->baseViewDirctory.'.form', compact('author'));
     }
@@ -94,6 +95,7 @@ class AuthorController extends Controller
         'slug'  => 'required|unique:authors,slug,'.$id,
         'order_by' => 'nullable',
         'status' => 'nullable',
+        'description' => 'nullable',
       ]);
 
       $author->update($modelAttributes);

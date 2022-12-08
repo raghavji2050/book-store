@@ -51,7 +51,9 @@
                         <div class="owl-stage-outer">
                             <div class="owl-stage" style="transform: translate3d(-1130px, 0px, 0px); transition: all 0s ease 0s; width: 3955px;">
                               @foreach($collection['books'] as $bookIndex => $book)
-                                @include('layouts.includes.home.product-area.book-card')
+                                <div class="owl-item {{ $bookIndex < 4 ? 'active' : '' }}" style="width: 262.5px; margin-right: 20px;">
+                                  @include('layouts.includes.home.product-area.book-card')
+                                </div>
                               @endforeach
                             </div>
                         </div>

@@ -13,8 +13,9 @@ class ImageController extends Controller
     public function uploadFile(Request $request)
     {
         $validator = Validator::make($request->all(), [
-           'file' => 'required|mimes:png,jpg,jpeg,webp|max:2048',
-           'book_id' => 'required|exists:books,id'
+           'file'    => 'required|mimes:png,jpg,jpeg,webp|max:2048',
+           'book_id' => 'nullable|exists:books,id',
+           'author_id' => 'nullable|exists:authors,id'
         ]);
 
         if ($validator->fails()) {
@@ -25,10 +26,11 @@ class ImageController extends Controller
              if ($request->file('file')) {
                   $path = $request->file('file')->store('books', 'public');
 
-                  Image::create([
+                  Image::create(array_filter([
                     'book_id' => $request->book_id,
+                    'author_id' => $request->author_id,
                     'path'    => $path,
-                  ]);
+                  ]));
 
                   $response['success'] = 1;
                   $response['message'] = 'Uploaded Successfully!';
@@ -46,10 +48,11 @@ class ImageController extends Controller
     {
         Storage::disk('public')->delete($request->filename);
 
-        Image::where([
+        Image::where(array_filter([
           'book_id' => $request->book_id,
+          'author_id' => $request->author_id,
           'path'    => $request->filename
-        ])->delete();
+        ]))->delete();
 
         return response()->json([
           'message' => 'File successfully deleted!'

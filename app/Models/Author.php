@@ -10,4 +10,14 @@ class Author extends Model
     use HasFactory;
 
     public $guarded = [];
+
+    public function images()
+    {
+      return $this->hasMany(Image::class);
+    }
+
+    public function books()
+    {
+      return $this->hasMany(Book::class);
+    }
 }

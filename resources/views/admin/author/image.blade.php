@@ -1,4 +1,4 @@
-@if ($book->id)
+@if ($author->id)
   <div class="row">
     <div class="col-md-12">
       <div class="card">
@@ -7,14 +7,14 @@
           </div>
           <div class="card-body">
             <form action="{{ route('admin.uploadFile') }}" class='dropzone'></form>
-            <input type="hidden" name="images" value="{{ json_encode($book->images) }}">
+            <input type="hidden" name="images" value="{{ json_encode($author->images) }}">
           </div>
       </div>
     </div>
   </div>
 @endif
 
-@if ($book->id)
+@if ($author->id)
   @section('styles')
     <link rel="stylesheet" type="text/css" href="/dropzone/dist/dropzone.css">
   @endsection
@@ -35,18 +35,20 @@
 
       var images = JSON.parse(document.querySelector('input[name="images"]').getAttribute("value"));
 
-      images.forEach((image, index) => {
-        var mockFile = { upload: { uuid: ++index }};
-        myDropzone.displayExistingFile(mockFile, `/storage/${image.path}`);
+      if (images) {
+        images.forEach((image, index) => {
+          var mockFile = { upload: { uuid: ++index }};
+          myDropzone.displayExistingFile(mockFile, `/storage/${image.path}`);
 
-        fileList[index] = image.path;
-      });
+          fileList[index] = image.path;
+        });
+      }
 
       $('.dz-message').show();
 
       myDropzone.on("sending", function(file, xhr, formData) {
         formData.append("_token", "{{ csrf_token() }}");
-        formData.append("book_id", "{{ $book->id }}");
+        formData.append("author_id", "{{ $author->id }}");
       });
 
       myDropzone.on("success", function(file, response) {
@@ -67,7 +69,7 @@
                   type: "POST",
                   data: {
                       filename: removeFile,
-                      book_id:  "{{ $book->id }}"
+                      author_id:  "{{ $author->id }}"
                   },
               });
           }

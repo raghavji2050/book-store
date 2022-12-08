@@ -49,6 +49,13 @@
                       <input type="number" class="form-control @error('order_by') is-invalid @enderror" id="order_by" placeholder="Order by" name="order_by" value="{{ $author->order_by }}" />
                       @include('admin.validation-error', ['element' => 'order_by'])
                     </div>
+                    <div class="mb-3">
+                        <label for="description">Description</label>
+                        <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description" placeholder="Description">
+                          {{ old('description', $author->description) }}
+                        </textarea>
+                        @include('admin.validation-error', ['element' => 'description'])
+                    </div>
                     <div class="form-check form-switch mb-3">
                       <input type="hidden" value="0" name="status">
   										<input class="form-check-input" type="checkbox" id="category-status" name="status" value="1" @if($author->status) checked @endif>
@@ -60,6 +67,7 @@
         </div>
       </div>
     </div>
+    @include('admin.author.image')
 </div>
 
 @endsection
