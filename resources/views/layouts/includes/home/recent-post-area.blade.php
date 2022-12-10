@@ -14,7 +14,7 @@
                             <div class="col-lg-12">
                                 <div class="single-post">
                                     <div class="post-img">
-                                        <a href="blog-details.html"><img src="img/post/2.webp" alt="post" /></a>
+                                        <a href="blog-details.html"><img src="/img/post/2.webp" alt="post" /></a>
                                         <div class="blog-date-time">
                                             <span class="day-time">06</span>
                                             <span class="moth-time">Dec</span>
@@ -32,7 +32,7 @@
                             <div class="col-lg-12">
                                 <div class="single-post">
                                     <div class="post-img">
-                                        <a href="blog-details.html"><img src="img/post/3.webp" alt="post" /></a>
+                                        <a href="blog-details.html"><img src="/img/post/3.webp" alt="post" /></a>
                                         <div class="blog-date-time">
                                             <span class="day-time">07</span>
                                             <span class="moth-time">Dec</span>
@@ -50,7 +50,7 @@
                             <div class="col-lg-12">
                                 <div class="single-post">
                                     <div class="post-img">
-                                        <a href="blog-details.html"><img src="img/post/4.webp" alt="post" /></a>
+                                        <a href="blog-details.html"><img src="/img/post/4.webp" alt="post" /></a>
                                         <div class="blog-date-time">
                                             <span class="day-time">08</span>
                                             <span class="moth-time">Dec</span>
@@ -68,7 +68,7 @@
                             <div class="col-lg-12">
                                 <div class="single-post">
                                     <div class="post-img">
-                                        <a href="#"><img src="img/post/1.webp" alt="post" /></a>
+                                        <a href="#"><img src="/img/post/1.webp" alt="post" /></a>
                                         <div class="blog-date-time">
                                             <span class="day-time">06</span>
                                             <span class="moth-time">Dec</span>
@@ -86,7 +86,7 @@
                             <div class="col-lg-12">
                                 <div class="single-post">
                                     <div class="post-img">
-                                        <a href="blog-details.html"><img src="img/post/2.webp" alt="post" /></a>
+                                        <a href="blog-details.html"><img src="/img/post/2.webp" alt="post" /></a>
                                         <div class="blog-date-time">
                                             <span class="day-time">06</span>
                                             <span class="moth-time">Dec</span>
@@ -104,7 +104,7 @@
                             <div class="col-lg-12">
                                 <div class="single-post">
                                     <div class="post-img">
-                                        <a href="blog-details.html"><img src="img/post/3.webp" alt="post" /></a>
+                                        <a href="blog-details.html"><img src="/img/post/3.webp" alt="post" /></a>
                                         <div class="blog-date-time">
                                             <span class="day-time">07</span>
                                             <span class="moth-time">Dec</span>
@@ -122,7 +122,7 @@
                             <div class="col-lg-12">
                                 <div class="single-post">
                                     <div class="post-img">
-                                        <a href="blog-details.html"><img src="img/post/4.webp" alt="post" /></a>
+                                        <a href="blog-details.html"><img src="/img/post/4.webp" alt="post" /></a>
                                         <div class="blog-date-time">
                                             <span class="day-time">08</span>
                                             <span class="moth-time">Dec</span>
@@ -140,7 +140,7 @@
                             <div class="col-lg-12">
                                 <div class="single-post">
                                     <div class="post-img">
-                                        <a href="#"><img src="img/post/1.webp" alt="post" /></a>
+                                        <a href="#"><img src="/img/post/1.webp" alt="post" /></a>
                                         <div class="blog-date-time">
                                             <span class="day-time">06</span>
                                             <span class="moth-time">Dec</span>
@@ -158,7 +158,7 @@
                             <div class="col-lg-12">
                                 <div class="single-post">
                                     <div class="post-img">
-                                        <a href="blog-details.html"><img src="img/post/2.webp" alt="post" /></a>
+                                        <a href="blog-details.html"><img src="/img/post/2.webp" alt="post" /></a>
                                         <div class="blog-date-time">
                                             <span class="day-time">06</span>
                                             <span class="moth-time">Dec</span>
@@ -176,7 +176,7 @@
                             <div class="col-lg-12">
                                 <div class="single-post">
                                     <div class="post-img">
-                                        <a href="blog-details.html"><img src="img/post/3.webp" alt="post" /></a>
+                                        <a href="blog-details.html"><img src="/img/post/3.webp" alt="post" /></a>
                                         <div class="blog-date-time">
                                             <span class="day-time">07</span>
                                             <span class="moth-time">Dec</span>

@@ -15,19 +15,25 @@ class BookResource extends JsonResource
      */
     public function toArray($request)
     {
-        $featuredImage = $this->images->where('is_featured', true)->first();
+        $images = $this->images;
+        $featuredImage = $images->where('is_featured', true)->first();
 
         if (!$featuredImage) {
-          $featuredImage = $this->images->first();
+          $featuredImage = $images->first();
         }
 
         return [
+          'id'               => $this->id,
           'name'             => $this->name,
           'price'            => $this->price,
           'discounted_price' => $this->discounted_price,
           'stars'            => $this->stars,
+          'sku'              => $this->sku,
+          'review_count'     => $this->review_count,
           'in_stock'         => $this->in_stock,
-          'featured_image'   => $featuredImage ? url(Storage::url($featuredImage->path)) : null
+          'description'      => $this->description,
+          'featured_image'   => $featuredImage ? url(Storage::url($featuredImage->path)) : null,
+          'images'           => ImageResource::collection($images)
         ];
     }
 }

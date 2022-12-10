@@ -1,14 +1,14 @@
 <div class="language-area">
     <ul>
         <li>
-            <img src="img/flag/1.webp" alt="flag" /><a href="#">English<i class="fa fa-angle-down"></i></a>
+            <img src="/img/flag/1.webp" alt="flag" /><a href="#">English<i class="fa fa-angle-down"></i></a>
             <div class="header-sub">
                 <ul>
                     <li>
-                        <a href="#"><img src="img/flag/2.webp" alt="flag" />france</a>
+                        <a href="#"><img src="/img/flag/2.webp" alt="flag" />france</a>
                     </li>
                     <li>
-                        <a href="#"><img src="img/flag/3.webp" alt="flag" />croatia</a>
+                        <a href="#"><img src="/img/flag/3.webp" alt="flag" />croatia</a>
                     </li>
                 </ul>
             </div>

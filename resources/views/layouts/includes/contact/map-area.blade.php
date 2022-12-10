@@ -91,7 +91,7 @@
                                         >
                                             <img
                                                 alt=""
-                                                src="img/map.png"
+                                                src="/img/map.png"
                                                 draggable="false"
                                                 style="position: absolute; left: 0px; top: 0px; user-select: none; width: 50px; height: 50px; border: 0px; padding: 0px; margin: 0px; max-width: none;"
                                             />

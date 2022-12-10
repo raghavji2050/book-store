@@ -26,4 +26,4 @@ Route::middleware('auth')->group(function () {
 
 Route::get('contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 Route::get('about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
-Route::get('product-detail', [App\Http\Controllers\HomeController::class, 'productDetail'])->name('productDetail');
+Route::get('product-detail/{id}', [App\Http\Controllers\BookController::class, 'show'])->name('productDetail');

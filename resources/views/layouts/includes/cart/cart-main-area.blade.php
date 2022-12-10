@@ -18,7 +18,7 @@
                             <tbody>
                                 <tr>
                                     <td class="product-thumbnail">
-                                        <a href="#"><img src="img/cart/1.jpg" alt="man" /></a>
+                                        <a href="#"><img src="/img/cart/1.jpg" alt="man" /></a>
                                     </td>
                                     <td class="product-name"><a href="#">Vestibulum suscipit</a></td>
                                     <td class="product-price"><span class="amount">£165.00</span></td>
@@ -30,7 +30,7 @@
                                 </tr>
                                 <tr>
                                     <td class="product-thumbnail">
-                                        <a href="#"><img src="img/cart/2.jpg" alt="man" /></a>
+                                        <a href="#"><img src="/img/cart/2.jpg" alt="man" /></a>
                                     </td>
                                     <td class="product-name"><a href="#">Vestibulum dictum magna</a></td>
                                     <td class="product-price"><span class="amount">£50.00</span></td>

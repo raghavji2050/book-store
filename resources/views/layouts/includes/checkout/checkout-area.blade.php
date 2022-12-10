@@ -277,7 +277,7 @@
                                                     <div class="panel-heading" role="tab" id="headingThree">
                                                         <h4 class="panel-title">
                                                             <a class="collapsed" role="button" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                                PayPal <img src="img/2.png" alt="payment" />
+                                                                PayPal <img src="/img/2.png" alt="payment" />
                                                             </a>
                                                         </h4>
                                                     </div>

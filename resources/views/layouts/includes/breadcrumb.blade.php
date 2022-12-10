@@ -7,7 +7,7 @@
 						<li><a href="{{ route('home') }}">Home</a></li>
 						@foreach($breadcrumbs as $breadcrumb)
 							<li>
-								<a href="{{ route($breadcrumb['route']) }}"
+								<a href="{{ route($breadcrumb['route'], $book['routeParams'] ?? '') }}"
 									 class="{{ request()->routeIs($breadcrumb['route']) ? 'active' : '' }}">
 									{{ $breadcrumb['text'] }}
 								</a>

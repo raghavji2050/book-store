@@ -5,7 +5,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="single-banner mb-30">
                     <div class="banner-img">
-                        <a href="#"><img src="img/banner/1.webp" alt="banner" /></a>
+                        <a href="#"><img src="/img/banner/1.webp" alt="banner" /></a>
                     </div>
                     <div class="banner-text">
                         <h4>Free shipping item</h4>
@@ -16,7 +16,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="single-banner mb-30">
                     <div class="banner-img">
-                        <a href="#"><img src="img/banner/2.webp" alt="banner" /></a>
+                        <a href="#"><img src="/img/banner/2.webp" alt="banner" /></a>
                     </div>
                     <div class="banner-text">
                         <h4>Money back guarantee</h4>
@@ -27,7 +27,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="single-banner mb-30">
                     <div class="banner-img">
-                        <a href="#"><img src="img/banner/3.webp" alt="banner" /></a>
+                        <a href="#"><img src="/img/banner/3.webp" alt="banner" /></a>
                     </div>
                     <div class="banner-text">
                         <h4>Cash on delivery</h4>
@@ -38,7 +38,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="single-banner mb-30">
                     <div class="banner-img">
-                        <a href="#"><img src="img/banner/4.webp" alt="banner" /></a>
+                        <a href="#"><img src="/img/banner/4.webp" alt="banner" /></a>
                     </div>
                     <div class="banner-text">
                         <h4>Help &amp; Support</h4>

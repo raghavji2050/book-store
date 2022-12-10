@@ -11,32 +11,32 @@
                         <div class="modal-tab">
                             <div class="product-details-large tab-content">
                                 <div class="tab-pane active" id="image-1">
-                                    <img src="img/product/quickview-l4.webp" alt="" />
+                                    <img src="/img/product/quickview-l4.webp" alt="" />
                                 </div>
                                 <div class="tab-pane" id="image-2">
-                                    <img src="img/product/quickview-l2.webp" alt="" />
+                                    <img src="/img/product/quickview-l2.webp" alt="" />
                                 </div>
                                 <div class="tab-pane" id="image-3">
-                                    <img src="img/product/quickview-l3.webp" alt="" />
+                                    <img src="/img/product/quickview-l3.webp" alt="" />
                                 </div>
                                 <div class="tab-pane" id="image-4">
-                                    <img src="img/product/quickview-l5.webp" alt="" />
+                                    <img src="/img/product/quickview-l5.webp" alt="" />
                                 </div>
                             </div>
                             <div class="product-details-small quickview-active owl-carousel owl-loaded owl-drag">
                                 <div class="owl-stage-outer">
                                     <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;">
                                         <div class="owl-item">
-                                            <a class="active" href="#image-1"><img src="img/product/quickview-s4.webp" alt="" /></a>
+                                            <a class="active" href="#image-1"><img src="/img/product/quickview-s4.webp" alt="" /></a>
                                         </div>
                                         <div class="owl-item">
-                                            <a href="#image-2"><img src="img/product/quickview-s2.webp" alt="" /></a>
+                                            <a href="#image-2"><img src="/img/product/quickview-s2.webp" alt="" /></a>
                                         </div>
                                         <div class="owl-item">
-                                            <a href="#image-3"><img src="img/product/quickview-s3.webp" alt="" /></a>
+                                            <a href="#image-3"><img src="/img/product/quickview-s3.webp" alt="" /></a>
                                         </div>
                                         <div class="owl-item">
-                                            <a href="#image-4"><img src="img/product/quickview-s5.webp" alt="" /></a>
+                                            <a href="#image-4"><img src="/img/product/quickview-s5.webp" alt="" /></a>
                                         </div>
                                     </div>
                                 </div>

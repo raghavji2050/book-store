@@ -10,7 +10,7 @@
                 <div class="single-team mb-30">
                     <div class="team-img-area">
                         <div class="team-img">
-                            <a href="#"><img src="img/team/1.jpg" alt="man" /></a>
+                            <a href="#"><img src="/img/team/1.jpg" alt="man" /></a>
                         </div>
                         <div class="team-link">
                             <ul>
@@ -36,7 +36,7 @@
                 <div class="single-team mb-30">
                     <div class="team-img-area">
                         <div class="team-img">
-                            <a href="#"><img src="img/team/2.jpg" alt="man" /></a>
+                            <a href="#"><img src="/img/team/2.jpg" alt="man" /></a>
                         </div>
                         <div class="team-link">
                             <ul>
@@ -62,7 +62,7 @@
                 <div class="single-team mb-30">
                     <div class="team-img-area">
                         <div class="team-img">
-                            <a href="#"><img src="img/team/3.jpg" alt="man" /></a>
+                            <a href="#"><img src="/img/team/3.jpg" alt="man" /></a>
                         </div>
                         <div class="team-link">
                             <ul>
@@ -88,7 +88,7 @@
                 <div class="single-team mb-30">
                     <div class="team-img-area">
                         <div class="team-img">
-                            <a href="#"><img src="img/team/4.jpg" alt="man" /></a>
+                            <a href="#"><img src="/img/team/4.jpg" alt="man" /></a>
                         </div>
                         <div class="team-link">
                             <ul>
