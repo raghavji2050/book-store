@@ -13,6 +13,6 @@
   {{-- @include('layouts.includes.home.testimonial-area') --}}
   {{-- @include('layouts.includes.home.recent-post-area') --}}
   {{-- @include('layouts.includes.home.social-group-area') --}}
-  @include('layouts.includes.home.product-modal')
+  <div class="product-detail-modal-div"></div>
 
 @endsection

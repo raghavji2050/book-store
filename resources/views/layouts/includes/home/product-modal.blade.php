@@ -10,34 +10,20 @@
                     <div class="col-md-5 col-sm-5 col-xs-12">
                         <div class="modal-tab">
                             <div class="product-details-large tab-content">
-                                <div class="tab-pane active" id="image-1">
-                                    <img src="/img/product/quickview-l4.webp" alt="" />
-                                </div>
-                                <div class="tab-pane" id="image-2">
-                                    <img src="/img/product/quickview-l2.webp" alt="" />
-                                </div>
-                                <div class="tab-pane" id="image-3">
-                                    <img src="/img/product/quickview-l3.webp" alt="" />
-                                </div>
-                                <div class="tab-pane" id="image-4">
-                                    <img src="/img/product/quickview-l5.webp" alt="" />
-                                </div>
+                                @foreach($book['images'] as $index => $image)
+                                  <div class="tab-pane {{ !$index ? 'active' : '' }}" id="image-{{++$index}}">
+                                      <img src="{{ $image['path'] }}" alt="" />
+                                  </div>
+                                @endforeach
                             </div>
-                            <div class="product-details-small quickview-active owl-carousel owl-loaded owl-drag">
+                            <div class="product-details-small quickview-active owl-carousel owl-loaded owl-drag mt-20">
                                 <div class="owl-stage-outer">
                                     <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;">
-                                        <div class="owl-item">
-                                            <a class="active" href="#image-1"><img src="/img/product/quickview-s4.webp" alt="" /></a>
+                                        @foreach($book['images'] as $index => $image)
+                                        <div class="owl-item {{ !$index ? 'active' : '' }}">
+                                            <a class="" href="{{ $image['path'] }}"><img src="{{ $image['path'] }}" alt="" style="width:20%" /></a>
                                         </div>
-                                        <div class="owl-item">
-                                            <a href="#image-2"><img src="/img/product/quickview-s2.webp" alt="" /></a>
-                                        </div>
-                                        <div class="owl-item">
-                                            <a href="#image-3"><img src="/img/product/quickview-s3.webp" alt="" /></a>
-                                        </div>
-                                        <div class="owl-item">
-                                            <a href="#image-4"><img src="/img/product/quickview-s5.webp" alt="" /></a>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <div class="owl-nav">
@@ -52,36 +38,18 @@
                     </div>
                     <div class="col-md-7 col-sm-7 col-xs-12">
                         <div class="modal-pro-content">
-                            <h3>Chaz Kangeroo Hoodie3</h3>
+                            <h3>{{ $book['name'] }}</h3>
                             <div class="price">
-                                <span>$70.00</span>
+                                <span>₹{{ $book['discounted_price'] ?? $book['price'] }}</span>
                             </div>
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>
-                            <div class="quick-view-select">
-                                <div class="select-option-part">
-                                    <label>Size*</label>
-                                    <select class="select">
-                                        <option value="">S</option>
-                                        <option value="">M</option>
-                                        <option value="">L</option>
-                                    </select>
-                                </div>
-                                <div class="quickview-color-wrap">
-                                    <label>Color*</label>
-                                    <div class="quickview-color">
-                                        <ul>
-                                            <li class="blue">b</li>
-                                            <li class="red">r</li>
-                                            <li class="pink">p</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <form action="#">
-                                <input type="number" value="1" />
-                                <button>Add to cart</button>
-                            </form>
-                            <span><i class="fa fa-check"></i> In stock</span>
+                            <p>{{ $book['description'] }}</p>
+                            @if ($book['in_stock'])
+                              <form action="javascript:void(0)">
+                                  <input type="number" value="1" class="qty" />
+                                  <button class="add-to-cart" data-book-id="{{ $book['id'] }}">Add to cart</button>
+                              </form>
+                              <span><i class="fa fa-check"></i> In stock</span>
+                            @endif
                         </div>
                     </div>
                 </div>

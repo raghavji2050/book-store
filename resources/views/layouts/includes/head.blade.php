@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.webp" />
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- all css here -->
     <!-- bootstrap v3.3.6 css -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" />

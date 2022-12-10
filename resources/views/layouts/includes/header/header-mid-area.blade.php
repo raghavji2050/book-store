@@ -8,7 +8,7 @@
             <div class="col-lg-6 col-md-4 col-12">
                 @include('layouts.includes.header.header-mid-area.logo-area')
             </div>
-            <div class="col-lg-3 col-md-3 col-12">
+            <div class="col-lg-3 col-md-3 col-12 update-cart-div">
                 @include('layouts.includes.header.header-mid-area.my-cart')
             </div>
         </div>

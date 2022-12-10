@@ -13,7 +13,14 @@ class BookController extends Controller
       $book = Book::findOrFail($id);
       $book = json_decode((new BookResource($book))->toJson(), true);
 
-      // echo "<pre>"; print_r($book); die;
       return view('product-detail', compact('book'));
+    }
+
+    public function bookModal($id)
+    {
+      $book = Book::findOrFail($id);
+      $book = json_decode((new BookResource($book))->toJson(), true);
+
+      return view('layouts.includes.home.product-modal', compact('book'))->render();
     }
 }

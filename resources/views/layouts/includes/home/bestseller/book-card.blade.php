@@ -1,6 +1,6 @@
 <div class="single-bestseller {{ !empty($additionalClass) ? $additionalClass : '' }}">
     <div class="bestseller-img">
-        <a href="#"><img src="{{ $book['featured_image'] }}" alt="book" /></a>
+        <a href="{{ route('productDetail', $book['id']) }}"><img src="{{ $book['featured_image'] }}" alt="book" /></a>
         <!-- <div class="product-flag">
             <ul>
                 <li><span class="sale">new</span></li>
@@ -9,7 +9,7 @@
         </div> -->
     </div>
     <div class="bestseller-text text-center">
-        <h3><a href="#">{{ $book['name'] }}</a></h3>
+        <h3><a href="{{ route('productDetail', $book['id']) }}">{{ $book['name'] }}</a></h3>
         <div class="price">
             <ul>
                 <li>

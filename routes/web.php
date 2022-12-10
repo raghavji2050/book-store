@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,11 @@ Route::middleware('auth')->group(function () {
 Route::get('contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 Route::get('about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 Route::get('product-detail/{id}', [App\Http\Controllers\BookController::class, 'show'])->name('productDetail');
+
+
+Route::get('product-detail-modal/{id}', [App\Http\Controllers\BookController::class, 'bookModal']);
+
+Route::post('cart/store', [CartController::class, 'addToCart'])->name('cart.store');
+Route::post('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
+Route::post('remove-cart', [CartController::class, 'removeCart'])->name('cart.remove');
+Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear');
