@@ -95,11 +95,6 @@ class HomeController extends Controller
       return view('my-account');
     }
 
-    public function checkout()
-    {
-      return view('checkout');
-    }
-
     public function cart()
     {
       return view('cart');

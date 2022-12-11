@@ -64,6 +64,13 @@ $("body").on("click", ".quick-view", function() {
     });
 });
 
+$("body").on("change", "#ship-box", function() {
+    let checked = $(this).is(":checked");
+
+    $('body #ship-box-info input[required_if]').prop('required', checked);
+    $('body #ship-box-info select[required_if]').prop('required', checked);
+});
+
 $.ajaxSetup({
   headers: {
     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

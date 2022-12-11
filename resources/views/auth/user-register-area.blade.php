@@ -67,45 +67,6 @@
                         </div>
                     </div>
                     <div class="single-register">
-                        <label>Country<span>*</span></label>
-                        <select class="chosen-select" tabindex="1" style="width: 100%;" data-placeholder="Default Sorting">
-                            <option value="country">Select a country</option>
-                            <option value="Islands">Aland Islands</option>
-                            <option value="Afghanistan">Afghanistan</option>
-                            <option value="Albania">Albania</option>
-                            <option value="Samoa">American Samoa</option>
-                        </select>
-                    </div>
-                    <div class="single-register">
-                        <label>Address<span>*</span></label>
-                        <input type="text" placeholder="Street address" />
-                        <input type="text" id="billing_address_2" placeholder="Apartment, suite, unit etc. (optional" />
-                    </div>
-                    <div class="single-register">
-                        <label>Town/City<span>*</span></label>
-                        <input type="text" />
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="single-register">
-                                <label>State<span>*</span></label>
-                                <select class="chosen-select" tabindex="1" style="width: 100%;" data-placeholder="Default Sorting">
-                                    <option value="Select">Select a State</option>
-                                    <option value="Andhra">Andhra Pradesh</option>
-                                    <option value="Pradesh">Arunachal Pradesh</option>
-                                    <option value="Delhi">Delhi</option>
-                                    <option value="Lakshadeep">Lakshadeep</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="single-register">
-                              <label>Postcode/zip<span>*</span></label>
-                              <input type="text" placeholder="Postcode/zip" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-register">
                         <label>Account password<span>*</span></label>
                         <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 

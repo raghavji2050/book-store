@@ -5,10 +5,25 @@
   @include('layouts.includes.breadcrumb', [
     'breadcrumbs' => [['route' => 'checkout', 'text' => 'Checkout']]
   ])
-  @include('layouts.includes.my-account.entry-header-area', [
-    'text' => 'Checkout'
-  ])
-  @include('layouts.includes.checkout.coupon-area')
+  <div class="row">
+    <div class="col-12">
+      <div class="entry-header-area">
+      	<div class="container">
+      		<div class="row">
+      			<div class="col-lg-12">
+      				<div class="entry-header-title">
+      					<h2>
+                  Checkout
+                  <a href="{{ route('checkout', ['edit_address' => true]) }}" class="btn btn-sqr float-end m-0">Edit Address</a>
+                </h2>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      </div>
+    </div>
+  </div>
+  {{-- @include('layouts.includes.checkout.coupon-area') --}}
   @include('layouts.includes.checkout.checkout-area')
 
 @endsection

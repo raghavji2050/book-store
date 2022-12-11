@@ -21,7 +21,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::middleware('auth')->group(function () {
   Route::get('my-account', [App\Http\Controllers\HomeController::class, 'myAccount'])->name('myAccount');
-  Route::get('checkout', [App\Http\Controllers\HomeController::class, 'checkout'])->name('checkout');
+  Route::get('checkout', [App\Http\Controllers\CheckoutController::class, 'checkout'])->name('checkout');
+  Route::post('checkout', [App\Http\Controllers\CheckoutController::class, 'store'])->name('checkout.store');
   Route::get('cart', [App\Http\Controllers\HomeController::class, 'cart'])->name('cart');
 });
 
