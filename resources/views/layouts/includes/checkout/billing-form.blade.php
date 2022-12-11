@@ -3,7 +3,7 @@
         <div class="country-select">
             <label>Country <span class="required">*</span></label>
             <select name="billing_country" required>
-                <option value="india">India</option>
+                <option value="IN">India</option>
             </select>
             @include('layouts.includes.validation-error', ['element' => 'billing_country'])
         </div>

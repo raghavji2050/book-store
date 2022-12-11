@@ -30,29 +30,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $productAreaBooks  = json_decode($this->getProductAreaBooks()->toJson(), true);
         $featuredBooks     = json_decode($this->getFeaturedBooks()->toJson(), true);
         $bestSellingAuthor = json_decode($this->getBestSellingAuthor()->toJson(), true);
-        $mostAreaBooks = json_decode($this->getMostAreaBooks()->toJson(), true);
 
-        return view('home', compact('productAreaBooks', 'featuredBooks', 'bestSellingAuthor', 'mostAreaBooks'));
-    }
-
-    public function getProductAreaBooks()
-    {
-      $topInterestingCollections = [
-        'new-arrival',
-        'on-sale',
-        'featured-product',
-      ];
-
-      $collections = Collection::whereIn('slug', $topInterestingCollections)
-                               ->where('status', true)
-                               ->with('books.images')
-                               ->orderBy('order_by')
-                               ->get();
-
-      return CollectionResource::collection($collections);
+        return view('home', compact('featuredBooks', 'bestSellingAuthor'));
     }
 
     public function getFeaturedBooks()
@@ -78,21 +59,6 @@ class HomeController extends Controller
                        ->first();
 
       return new AuthorResource($author);
-    }
-
-    public function getMostAreaBooks()
-    {
-      $collections = Category::where('status', true)
-                             ->with('books.images')
-                             ->orderBy('order_by')
-                             ->get();
-
-      return CategoryResource::collection($collections);
-    }
-
-    public function myAccount()
-    {
-      return view('my-account');
     }
 
     public function cart()

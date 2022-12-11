@@ -1,4 +1,3 @@
-
 $("body").on("click", ".add-to-cart", function() {
     var bookId = $(this).data('book-id');
     var quantity = $(this).parents('form:first .qty').val() || $('body .qty').val();
@@ -11,6 +10,7 @@ $("body").on("click", ".add-to-cart", function() {
             quantity:  quantity
         },
         success: function(response) {
+          toastr.success('Book added to cart!');
           $('.update-cart-div').html(response.myCartHtml);
           $('.cart-main-area-div').html(response.cartMainArea);
         }
@@ -27,6 +27,7 @@ $("body").on("click", ".remove-from-cart", function() {
             book_id: bookId,
         },
         success: function(response) {
+          toastr.success('Book removed from cart!');
           $('.update-cart-div').html(response.myCartHtml);
           $('.cart-main-area-div').html(response.cartMainArea);
         }

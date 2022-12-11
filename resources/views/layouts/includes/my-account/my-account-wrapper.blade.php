@@ -15,8 +15,8 @@
                                 <div class="myaccount-tab-menu nav" role="tablist">
                                     <a href="#dashboad" class="active" data-bs-toggle="tab" aria-selected="true" role="tab"><i class="fa fa-dashboard"></i> Dashboard</a>
                                     <a href="#orders" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab"><i class="fa fa-cart-arrow-down"></i> Orders</a>
-                                    <a href="#download" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab"><i class="fa fa-cloud-download"></i> Download</a>
-                                    <a href="#payment-method" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab"><i class="fa fa-credit-card"></i> Payment Method</a>
+                                    <!-- <a href="#download" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab"><i class="fa fa-cloud-download"></i> Download</a> -->
+                                    <!-- <a href="#payment-method" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab"><i class="fa fa-credit-card"></i> Payment Method</a> -->
                                     <a href="#address-edit" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab"><i class="fa fa-map-marker"></i> address</a>
                                     <a href="#account-info" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab"><i class="fa fa-user"></i> Account Details</a>
                                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -57,31 +57,23 @@
                                                             <th>Date</th>
                                                             <th>Status</th>
                                                             <th>Total</th>
-                                                            <th>Action</th>
+                                                            <!-- <th>Action</th> -->
                                                         </tr>
                                                     </thead>
                                                     <tbody>
+                                                        @forelse($orders as $order)
                                                         <tr>
-                                                            <td>1</td>
-                                                            <td>Aug 22, 2018</td>
-                                                            <td>Pending</td>
-                                                            <td>$3000</td>
-                                                            <td><a href="cart.html" class="btn btn-sqr">View</a></td>
+                                                            <td>{{ $order->id }}</td>
+                                                            <td>{{ $order->created_at->format('M d, Y') }}</td>
+                                                            <td>{{ $order->status }}</td>
+                                                            <td>₹{{ $order->total }}</td>
+                                                            <!-- <td><a href="cart.html" class="btn btn-sqr">View</a></td> -->
                                                         </tr>
-                                                        <tr>
-                                                            <td>2</td>
-                                                            <td>July 22, 2018</td>
-                                                            <td>Approved</td>
-                                                            <td>$200</td>
-                                                            <td><a href="cart.html" class="btn btn-sqr">View</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3</td>
-                                                            <td>June 12, 2017</td>
-                                                            <td>On Hold</td>
-                                                            <td>$990</td>
-                                                            <td><a href="cart.html" class="btn btn-sqr">View</a></td>
-                                                        </tr>
+                                                        @empty
+                                                          <tr>
+                                                            <td colspan="5"></td>
+                                                          </tr>
+                                                        @endforelse
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -140,15 +132,18 @@
                                     <div class="tab-pane fade" id="address-edit" role="tabpanel">
                                         <div class="myaccount-content">
                                             <h5>Billing Address</h5>
-                                            <address>
-                                                <p><strong>Erik Jhonson</strong></p>
-                                                <p>
-                                                    1355 Market St, Suite 900 <br />
-                                                    San Francisco, CA 94103
-                                                </p>
-                                                <p>Mobile: (123) 456-7890</p>
-                                            </address>
-                                            <a href="#" class="btn btn-sqr"><i class="fa fa-edit"></i> Edit Address</a>
+                                            @if ($billingAddress)
+                                              <address>
+                                                  <p><strong>{{ $billingAddress->full_name }}</strong></p>
+                                                  <p>
+                                                      {{ $billingAddress->address }}<br />
+                                                      {{ $billingAddress->city }}, {{ $billingAddress->state }} {{ $billingAddress->postal_code }}
+                                                  </p>
+                                                  <p><b>Mobile:</b> {{ $billingAddress->phone }}</p>
+                                                  <p><b>Email:</b> {{ $billingAddress->email }}</p>
+                                              </address>
+                                            @endif
+                                            <!-- <a href="#" class="btn btn-sqr"><i class="fa fa-edit"></i> Edit Address</a> -->
                                         </div>
                                     </div>
                                     <!-- Single Tab Content End -->
@@ -163,21 +158,21 @@
                                                         <div class="col-lg-6">
                                                             <div class="single-input-item">
                                                                 <label for="first-name" class="required">First Name</label>
-                                                                <input type="text" id="first-name" placeholder="First Name" value="{{ $user->first_name }}"/>
+                                                                <input type="text" id="first-name" placeholder="First Name" value="{{ $user->first_name }}" disabled/>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6">
                                                             <div class="single-input-item">
                                                                 <label for="last-name" class="required">Last Name</label>
-                                                                <input type="text" id="last-name" placeholder="Last Name" value="{{ $user->last_name }}"/>
+                                                                <input type="text" id="last-name" placeholder="Last Name" value="{{ $user->last_name }}" disabled/>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="single-input-item">
                                                         <label for="email" class="required">Email Address</label>
-                                                        <input type="email" id="email" placeholder="Email Address" value="{{ $user->email }}" />
+                                                        <input type="email" id="email" placeholder="Email Address" value="{{ $user->email }}" disabled/>
                                                     </div>
-                                                    <fieldset>
+                                                    <!-- <fieldset>
                                                         <legend>Password change</legend>
                                                         <div class="single-input-item">
                                                             <label for="current-pwd" class="required">Current Password</label>
@@ -200,7 +195,7 @@
                                                     </fieldset>
                                                     <div class="single-input-item">
                                                         <button class="btn btn-sqr">Save Changes</button>
-                                                    </div>
+                                                    </div> -->
                                                 </form>
                                             </div>
                                         </div>

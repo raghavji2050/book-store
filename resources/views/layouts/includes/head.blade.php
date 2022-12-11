@@ -28,4 +28,6 @@
     <link rel="stylesheet" href="/css/responsive.css" />
     <!-- modernizr css -->
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
 </head>

@@ -19,10 +19,18 @@
       				</div>
       			</div>
       		</div>
+          @if (count($errors) > 0)
+            <div class="alert alert-danger">
+              @foreach ($errors->all() as $error)
+                {{ $error }}<br>
+              @endforeach
+            </div>
+          @endif
       	</div>
       </div>
     </div>
   </div>
+
   {{-- @include('layouts.includes.checkout.coupon-area') --}}
   @include('layouts.includes.checkout.checkout-area')
 

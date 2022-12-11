@@ -8,6 +8,7 @@
   @include('layouts.includes.my-account.entry-header-area', [
     'text' => 'Cart'
   ])
+
   <div class="cart-main-area-div">
     @include('layouts.includes.cart.cart-main-area')
   </div>

@@ -13,5 +13,7 @@
         @include('layouts.includes.footer')
         @include('layouts.includes.scroll-up')
         @include('layouts.includes.scripts')
+
+        @yield('scripts')
     </body>
 </html>
